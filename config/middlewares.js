@@ -14,7 +14,18 @@ module.exports = [
       },
     },
   },
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      header: "*",
+      origin: [
+        "http://localhost:1337",
+        "https://coolkart-strapi-backend.onrender.com",
+      ],
+    },
+  },
+
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
